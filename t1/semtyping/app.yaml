@@ -1,0 +1,21 @@
+application: semtyping
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /js
+  static_dir: js
+
+- url: /css
+  static_dir: css
+
+- url: /html
+  static_dir: html
+
+- url: /
+  script: mainPage.html
+
+- url: http://127.0.0.1:8000/app_ner.py
+    script:app_ner.py
